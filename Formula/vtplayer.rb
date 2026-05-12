@@ -5,6 +5,11 @@ class Vtplayer < Formula
   sha256 "0b624d34f272c7f6d892c0cd0d948365fd5e2d90949eddc765cf2332f47778b8"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "73be6ac4776dd05062e2f56fac532cf18fc06da25dc4e84ff2ff548e1e7da377"
+  end
+
   depends_on "cmake" => :build
 
   # vtplayer's CMakeLists.txt pulls these via FetchContent. Homebrew blocks
