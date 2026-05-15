@@ -20,15 +20,23 @@ class Vtplayer < Formula
     sha256 "841f49f2e045b9c6365997c2a8fbf76e6f215042dda4511a5bb04bc5ebc7f88a"
   end
 
+  resource "taglib" do
+    url "https://github.com/taglib/taglib/archive/refs/tags/v2.0.2.tar.gz"
+    sha256 "0de288d7fe34ba133199fd8512f19cc1100196826eafcb67a33b224ec3a59737"
+  end
+
   def install
     ventty_src  = buildpath/"_deps/ventty"
     cxxopts_src = buildpath/"_deps/cxxopts"
+    taglib_src  = buildpath/"_deps/taglib"
     resource("ventty").stage  ventty_src
     resource("cxxopts").stage cxxopts_src
+    resource("taglib").stage  taglib_src
 
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
                     "-DFETCHCONTENT_SOURCE_DIR_VENTTY=#{ventty_src}",
-                    "-DFETCHCONTENT_SOURCE_DIR_CXXOPTS=#{cxxopts_src}"
+                    "-DFETCHCONTENT_SOURCE_DIR_CXXOPTS=#{cxxopts_src}",
+                    "-DFETCHCONTENT_SOURCE_DIR_TAGLIB=#{taglib_src}"
     system "cmake", "--build", "build"
     bin.install "build/vtplayer"
   end
