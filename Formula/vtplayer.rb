@@ -6,6 +6,9 @@ class Vtplayer < Formula
   license "LGPL-2.1-or-later"
 
   depends_on "cmake" => :build
+  # TagLib 2.x requires utfcpp headers at compile time; taglib is linked
+  # statically into vtplayer, so this is build-only.
+  depends_on "utf8cpp" => :build
 
   # vtplayer's CMakeLists.txt pulls these via FetchContent. Homebrew blocks
   # in-build FetchContent, so we stage them as resources and point CMake at
