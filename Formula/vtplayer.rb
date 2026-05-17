@@ -7,8 +7,8 @@ class Vtplayer < Formula
 
   bottle do
     root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.5.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0a09f22c6b17b981e2ac3a2df957b0d5ae640c9a552d64e48e6595c3d75005b3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "bb5d2a41b50f146001dfb5e1023f09bf34b28756a4792a88507e9a90482fc8ea"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5f3e0b0939b4e08135c773b07ef3ab0479291fa002cca1667808d068e40c6d52"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6cd611051259820300a8565f9e953320f6dc1afc93244fc290ab89d40f9eeb06"
   end
 
   depends_on "cmake" => :build
