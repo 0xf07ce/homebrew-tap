@@ -1,12 +1,12 @@
 class Vtplayer < Formula
   desc "Terminal-based music player for MP3, OGG, FLAC, and WAV"
   homepage "https://github.com/0xf07ce/vtplayer"
-  url "https://github.com/0xf07ce/vtplayer/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "06fae90e788d355774be7b9bb28ff9d4b9cb9b82f777010876f80500a27945d5"
+  url "https://github.com/0xf07ce/vtplayer/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "1998bf69a2c6841d54991cd4668f17c32d01c36d878b28d6f4154e76d434a3ad"
   license "LGPL-2.1-or-later"
 
   bottle do
-    root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.4.0"
+    root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.5.0"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "0a09f22c6b17b981e2ac3a2df957b0d5ae640c9a552d64e48e6595c3d75005b3"
     sha256 cellar: :any_skip_relocation, arm64_tahoe: "bb5d2a41b50f146001dfb5e1023f09bf34b28756a4792a88507e9a90482fc8ea"
   end
