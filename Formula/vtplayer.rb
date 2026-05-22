@@ -1,14 +1,14 @@
 class Vtplayer < Formula
   desc "Terminal-based music player for MP3, OGG, FLAC, and WAV"
   homepage "https://github.com/0xf07ce/vtplayer"
-  url "https://github.com/0xf07ce/vtplayer/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "cfb13b879d9db908986da0532c632bff087ea026e07f24011da34de33cba3feb"
+  url "https://github.com/0xf07ce/vtplayer/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "5ac43f41113e2c5f069fc4df6843ce3e796e6f63c07941879be86b4947805900"
   license "LGPL-2.1-or-later"
 
   # The `bottle do` block is written automatically by the release workflow
   # (`brew bottle --merge --write`); do not edit it by hand.
   bottle do
-    root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.8.1"
+    root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.11.0"
     sha256 cellar: :any, arm64_tahoe:   "0b300d3efd25a22229bfbff78b6a8ec2675853bef6e459c94cbf6b03857416db"
     sha256 cellar: :any, arm64_sequoia: "fa57a8d7990a91f980faea4d7136b68f78fe800404493dd669fd9040738d9f6d"
   end
@@ -37,8 +37,8 @@ class Vtplayer < Formula
   # (no network during the build). This resource's sha256 is bumped
   # automatically by the release workflow's `prepare` job.
   resource "ventty" do
-    url "https://github.com/0xf07ce/ventty/archive/refs/tags/v0.2.1.tar.gz"
-    sha256 "1d93b527b358bf0bcd3c2515b60de860d60598c1983c7b5a8fefe4e83f9aad98"
+    url "https://github.com/0xf07ce/ventty/archive/refs/tags/v0.3.0.tar.gz"
+    sha256 "acf3d89481761027cc8583fc886538f94029874686dbd85321480b50ba7916c4"
   end
 
   def install
