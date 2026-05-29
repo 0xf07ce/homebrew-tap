@@ -16,20 +16,20 @@ class Vtplayer < Formula
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
 
-  # Previously git-cloned by CMake FetchContent and built from source on every
-  # bottle. Now taken from prebuilt Homebrew bottles via
-  # -DVTPLAYER_USE_SYSTEM_DEPS=ON (find_package). This removes the TagLib
-  # source build and per-dependency resource sha256 churn.
-  depends_on "cxxopts"
-  depends_on "sqlite"
-  depends_on "taglib"
-
   # ffmpeg is required at both build (libav headers + pkg-config) and runtime
   # (linked shared libraries). vtplayer delegates *all* audio decoding —
   # local files and internet-radio streams — to libavformat/libavcodec/
   # libswresample, so the formerly optional runtime `ffmpeg` binary
   # dependency has been replaced with a mandatory library-level link.
   depends_on "ffmpeg"
+
+  # Previously git-cloned by CMake FetchContent and built from source on every
+  # bottle. Now taken from prebuilt Homebrew bottles via
+  # -DVTPLAYER_USE_SYSTEM_DEPS=ON (find_package). This removes the TagLib
+  # source build and per-dependency resource sha256 churn. cxxopts is no
+  # longer listed: it is vendored as a single header in deps/include/cxxopts/.
+  depends_on "sqlite"
+  depends_on "taglib"
 
   # ventty has no upstream install()/export() rules, so it cannot be a
   # find_package dependency. It is small and tagged infrequently, so it stays
