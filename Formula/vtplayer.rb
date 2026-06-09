@@ -1,14 +1,14 @@
 class Vtplayer < Formula
   desc "Terminal-based music player for MP3, OGG, FLAC, and WAV"
   homepage "https://github.com/0xf07ce/vtplayer"
-  url "https://github.com/0xf07ce/vtplayer/archive/refs/tags/v0.17.1.tar.gz"
-  sha256 "0c1919084c9927aee3f52302aae31b97000ad308804ed5fbb1ae8339359f7677"
+  url "https://github.com/0xf07ce/vtplayer/archive/refs/tags/v0.17.2.tar.gz"
+  sha256 "043d5dff0d8a73dbfc58d524e8200f8003a414ddfb2d0a09f48d016930979943"
   license "LGPL-2.1-or-later"
 
   # The `bottle do` block is written automatically by the release workflow
   # (`brew bottle --merge --write`); do not edit it by hand.
   bottle do
-    root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.17.1"
+    root_url "https://github.com/0xf07ce/vtplayer/releases/download/v0.17.2"
     sha256 cellar: :any, arm64_tahoe:   "7ec04d6e06d146d7e98fdbdea849ac8a80d09f1c5f5a41206149f22c094b1df6"
     sha256 cellar: :any, arm64_sequoia: "e1d70e39b5ae43b9772bb0e6e4137afe184d217e80a34a27dc1d4ea52db87199"
   end
