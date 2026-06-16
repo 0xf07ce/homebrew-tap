@@ -9,8 +9,8 @@ class Vtplayer < Formula
   # (`brew bottle --merge --write`); do not edit it by hand.
   bottle do
     root_url "https://github.com/0xf07ce/vtplayer/releases/download/v1.0.4"
-    sha256 cellar: :any, arm64_tahoe:   "845ffd2883730901601532a6f22593e42a8d255f218ea9ddeef0a59d4770b015"
-    sha256 cellar: :any, arm64_sequoia: "d3324ad695930f67a17d9b2676532bc355e3f1f4b46b98e7685a0b1cb5f12e84"
+    sha256 cellar: :any, arm64_tahoe:   "497ee90ee7926ef2476a765ddf8951b13cd0f672375ffee3dd4d340aa6c0044c"
+    sha256 cellar: :any, arm64_sequoia: "64576a8713215f2c3f7f1819c6e4acdeb87b3b81911230d12341aab410ae97e8"
   end
 
   depends_on "cmake" => :build
